@@ -31,11 +31,34 @@
   color: #242424;
 }
 
-.headerIcon {
-  height: 32px;
-  width: auto;
-  margin-left: 36px;
+.chatIconContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
 }
+
+.chatIcon {
+  height: 150px;
+  width: 400px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .chatIconContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .chatIcon {
+    height: 100px;
+    width: 250px;
+  }
+}
+
 
 .shareButtonContainer {
   display: flex;
