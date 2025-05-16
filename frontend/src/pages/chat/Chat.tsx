@@ -792,10 +792,10 @@ const Chat = () => {
   <div className={styles.chatContainer}>
     {!messages || messages.length < 1 ? (
       <Stack className={styles.chatEmptyState}>
-        <div className="chatIconContainer">
-          <img src={collegeLogo} className="chatIcon" alt="College of Policing Logo" />
-          <img src={btpLogo} className="chatIcon" alt="BTP Logo" />
-        </div> {/* ✅ Properly closed here */}
+<div className={styles.chatIconContainer}>
+  <img src={collegeLogo} className={styles.chatIcon} alt="College of Policing Logo" />
+  <img src={btpLogo} className={styles.chatIcon} alt="BTP Logo" />
+</div>
         <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
         <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
       </Stack> {/* ✅ This closes the Stack for the empty state */}
