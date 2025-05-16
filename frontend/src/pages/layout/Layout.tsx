@@ -96,19 +96,20 @@ const Layout = () => {
         </Stack>
       </header>
       
-      {/* Chat Icons Section */}
-      <div className={styles.chatIconContainer}>
-        <img
-          className={styles.chatIcon}
-          src="/College of Policing logo.png"
-          alt="College of Policing Logo"
-        />
-        <img
-          className={styles.chatIcon}
-          src="/BTP logo Full Colour_KC.png"
-          alt="BTP Logo Full Colour"
-        />
-      </div>
+
+{/* Chat Icons Section */}
+<div className={styles.chatIconContainer}>
+  <img
+    className={styles.chatIcon}
+    src={collegeLogo}
+    alt="College of Policing Logo"
+  />
+  <img
+    className={styles.chatIcon}
+    src={btpLogo}
+    alt="BTP Logo Full Colour"
+  />
+</div>
       
       <Outlet />
       <Dialog
