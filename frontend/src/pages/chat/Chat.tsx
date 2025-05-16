@@ -64,7 +64,6 @@ const Chat = () => {
   const [clearingChat, setClearingChat] = useState<boolean>(false)
   const [hideErrorDialog, { toggle: toggleErrorDialog }] = useBoolean(true)
   const [errorMsg, setErrorMsg] = useState<ErrorMessage | null>()
-  const [logo, setLogo] = useState('')
   const [answerId, setAnswerId] = useState<string>('')
 
   const errorDialogContentProps = {
@@ -106,12 +105,6 @@ const Chat = () => {
       setErrorMsg(null)
     }, 500)
   }
-
-  useEffect(() => {
-    if (!appStateContext?.state.isLoading) {
-      setLogo(ui?.chat_logo || ui?.logo || Contoso)
-    }
-  }, [appStateContext?.state.isLoading])
 
   useEffect(() => {
     setIsLoading(appStateContext?.state.chatHistoryLoadingState === ChatHistoryLoadingState.Loading)
