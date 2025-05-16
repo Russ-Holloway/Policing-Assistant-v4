@@ -12,7 +12,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
-import Contoso from '../../assets/Contoso.svg'
+import collegeLogo from '../../assets/College of Policing logo.png';
+import btpLogo from '../../assets/BTP logo Full Colour_KC.png';
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
 import {
@@ -787,14 +788,17 @@ const Chat = () => {
           </h2>
         </Stack>
       ) : (
-        <Stack horizontal className={styles.chatRoot}>
-          <div className={styles.chatContainer}>
-            {!messages || messages.length < 1 ? (
-              <Stack className={styles.chatEmptyState}>
-                <img src={logo} className={styles.chatIcon} aria-hidden="true" />
-                <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
-                <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
-              </Stack>
+<Stack horizontal className={styles.chatRoot}>
+  <div className={styles.chatContainer}>
+    {!messages || messages.length < 1 ? (
+      <Stack className={styles.chatEmptyState}>
+        <div className="chatIconContainer">
+          <img src={collegeLogo} className="chatIcon" alt="College of Policing Logo" />
+          <img src={btpLogo} className="chatIcon" alt="BTP Logo" />
+        </div> {/* ✅ Properly closed here */}
+        <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
+        <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
+      </Stack> {/* ✅ This closes the Stack for the empty state */}
             ) : (
               <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? '40px' : '0px' }} role="log">
                 {messages.map((answer, index) => (
