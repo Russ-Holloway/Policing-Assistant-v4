@@ -369,6 +369,19 @@ a {
   max-height: 70%;
   border-radius: 4px;
 }
+.chatIconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.chatIcon {
+  height: 150px;
+  width: 400px;
+}
 
 @media (max-width: 480px) {
   .chatInput {
@@ -394,5 +407,11 @@ a {
 
   .citationPanel {
     max-width: 100%;
+  }
+
+  /* ✅ Add this at the bottom of the media query */
+  .chatIcon {
+    height: 100px;
+    width: 250px;
   }
 }
