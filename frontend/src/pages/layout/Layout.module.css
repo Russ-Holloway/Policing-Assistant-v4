@@ -33,18 +33,16 @@
 
 .chatIconContainer {
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10px;
+  flex-direction: row; /* ensures icons are side by side */
+  justify-content: center; /* centers them horizontally */
+  align-items: center; /* aligns them vertically */
+  gap: 16px; /* space between icons */
+  margin-top: 20px; /* optional spacing from header */
 }
 
 .chatIcon {
   height: 150px;
   width: 400px;
-  max-width: 100%;
-  object-fit: contain;
 }
 
 @media (max-width: 600px) {
