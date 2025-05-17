@@ -61,9 +61,18 @@
   color: #616161;
 }
 
+.chatIconContainer {
+  display: flex;
+  flex-direction: row; /* ensures side-by-side layout */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
 .chatIcon {
-  height: 62px;
-  width: auto;
+  height: 150px;
+  width: 400px;
 }
 
 .chatMessageStream {
