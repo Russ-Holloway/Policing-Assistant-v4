@@ -73,6 +73,7 @@
 .chatIcon {
   height: 150px;
   width: 400px;
+  object-fit: contain;
 }
 
 .chatMessageStream {
