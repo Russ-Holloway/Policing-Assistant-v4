@@ -3,8 +3,8 @@ import { Link, Outlet } from 'react-router-dom'
 import { Dialog, Stack, TextField } from '@fluentui/react'
 import { CopyRegular } from '@fluentui/react-icons'
 import { CosmosDBStatus } from '../../api'
-import collegeLogo from '../../assets/College of Policing logo.png'
-import btpLogo from '../../assets/BTP logo Full Colour_KC.png'
+import collegeLogo from '../../assets/College-of-Policing-logo.png'
+import btpLogo from '../../assets/BTP-logo.png'
 import { HistoryButton, ShareButton } from '../../components/common/Button'
 import { AppStateContext } from '../../state/AppProvider'
 import styles from './Layout.module.css'
@@ -84,7 +84,7 @@ const Layout = () => {
       {/* Always show both logos */}
       <div className={styles.chatIconContainer}>
         <img className={styles.chatIcon} src={collegeLogo} alt="College of Policing Logo" />
-        <img className={styles.chatIcon} src={btpLogo} alt="BTP Logo Full Colour" />
+        <img className={styles.chatIcon} src={btpLogo} alt="BTP Logo" />
       </div>
 
       <Outlet />
