@@ -13,7 +13,7 @@ import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
 import btpLogo from '../assets/BTP-logo.png';
-import collegeLogo from '../assets/college-logo.png';
+import collegeLogo from '../assets/College-of-Policing-logo.png';
 
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
