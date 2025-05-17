@@ -12,8 +12,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
-import collegeLogo from '../../assets/College-of-Policing-logo.png';
-import btpLogo from '../../assets/BTP-logo.png';
+import collegelogo from '../../assets/College-of-Policing-logo.png';
+import btplogo from '../../assets/BTP-logo.png';
 
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
@@ -786,8 +786,8 @@ const Chat = () => {
   <div className={styles.chatContainer}>
     {!messages || messages.length < 1 ? (
 <Stack className={styles.chatEmptyState}>
-  <img src={collegeLogo} className={styles.chatIcon} alt="College of Policing Logo" />
-  <img src={btpLogo} className={styles.chatIcon} alt="BTP Logo Full Colour" />
+  <img src={collegelogo} className={styles.chatIcon} alt="College of Policing logo" />
+  <img src={btplogo} className={styles.chatIcon} alt="BTP logo" />
   <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
   <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
 </Stack>
